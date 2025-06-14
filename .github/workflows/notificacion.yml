@@ -15,5 +15,5 @@ jobs:
         run: |
           curl -H "Title: 🔔 Se ha realizado un push o pull request" \
                -H "Priority: high" \
-               -d "📦 Se han realizado cambios en el repositorio." \
+               -d "📦 Se han realizado cambios en el repositorio. Reynaldo 2023-0201" \
                https://ntfy.sh/devops-itla

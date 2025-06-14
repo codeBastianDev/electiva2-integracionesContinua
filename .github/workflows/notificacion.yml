@@ -1,4 +1,4 @@
-name: notificar en push a main
+name: Notificar en push a main
 
 on:
   push:
@@ -6,14 +6,14 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
+
 jobs:
- notificar:
-  runs-on: ubuntu-latest
-  steps:
+  notificar:
+    runs-on: ubuntu-latest
+    steps:
       - name: Enviar notificación a ntfy.sh
         run: |
-          curl -H "Se ha realiazo un push" \
+          curl -H "Title: 🔔 Se ha realizado un push o pull request" \
                -H "Priority: high" \
-               -d " Se hann realizados cambios en el repositorio " \
+               -d "📦 Se han realizado cambios en el repositorio." \
                https://ntfy.sh/devops-itla
-  
